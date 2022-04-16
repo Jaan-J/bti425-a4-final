@@ -1,0 +1,18 @@
+<div class="widget latest-posts">
+    <header>
+        <h3 class="h6">Latest Posts</h3>
+    </header>
+    <div class="blog-posts">
+        <a [routerLink]="['/post', p._id]" *ngFor="let p of blogPosts">
+            <div class="item d-flex align-items-center">
+                <div class="image"><img [src]="p.featuredImage" alt="..." class="img-fluid"></div>
+                <div class="title"><strong>{{ p.title }}</strong>
+                    <div class="d-flex align-items-center">
+                        <div class="views"><i class="icon-eye"></i> {{ p.views }}</div>
+                        <div class="comments"><i class="icon-comment"></i>{{ p.comments.length }}</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
